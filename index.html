@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Div Everything Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="nav-item">Home</div>
+      <div class="nav-item">About</div>
+      <div class="nav-item">Contact</div>
+    </div>
+    <div class="hero">
+      <div class="hero-title">Welcome to the Div Only Site</div>
+      <div class="hero-text">This entire layout uses only div elements.</div>
+      <div class="hero-button" onclick="alertBox()">Learn More</div>
+    </div>
+    <div class="content">
+      <div class="section">
+        <div class="heading sub-heading-2">Sub Heading</div>
+        <div class="section-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          rhoncus facilisis magna et lacinia. Aliquam id luctus dolor, et
+          aliquet diam. Sed consectetur, ipsum vel mattis sodales, nisi arcu
+          euismod mauris, et dictum risus orci a diam. Quisque orci libero,
+          fringilla a mattis vitae, euismod eget arcu.
+        </div>
+      </div>
+      <div class="section">
+        <div class="heading sub-heading-3">Sub Heading for section</div>
+        <div class="section-title">Another Section</div>
+        <div class="section-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          rhoncus facilisis magna et lacinia. Aliquam id luctus dolor, et
+          aliquet diam. Sed consectetur, ipsum vel mattis sodales, nisi arcu
+          euismod mauris, et dictum risus orci a diam. Quisque orci libero,
+          fringilla a mattis vitae, euismod eget arcu.
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">Div Links</div>
+        <div class="div-link" onclick="openSearch()">Link One</div>
+        <div class="div-link" onclick="openSearch()">Link Two</div>
+      </div>
+
+      <div class="section">
+        <div class="heading sub-heading-2">Sub Heading for Table</div>
+        <div class="div-table">
+          <div class="div-row">
+            <div class="div-cell div-row1-cell">Heading Row Cell 1</div>
+            <div class="div-cell div-row1-cell">Heading Row Cell 2</div>
+            <div class="div-cell div-row1-cell">Heading Row Cell 3</div>
+          </div>
+          <div class="div-row">
+            <div class="div-cell">Row 2 Cell 1</div>
+            <div class="div-cell">Row 2 Cell 2</div>
+            <div class="div-cell">Row 2 Cell 3</div>
+          </div>
+          <div class="div-row">
+            <div class="div-cell">Row 2 Cell 1</div>
+            <div class="div-cell">Row 2 Cell 2</div>
+            <div class="div-cell">Row 2 Cell 3</div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="heading sub-heading-2">Sub Heading</div>
+        <div class="section-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+          rhoncus facilisis magna et lacinia. Aliquam id luctus dolor, et
+          aliquet diam. Sed consectetur, ipsum vel mattis sodales, nisi arcu
+          euismod mauris, et dictum risus orci a diam. Quisque orci libero,
+          fringilla a mattis vitae, euismod eget arcu.
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-item">© 2024 Div Demo</div>
+    </div>
+  </body>
+  <script>
+    function alertBox() {
+      alert("Learning more");
+    }
+    function openSearch() {
+      window.open("https://www.google.com", "_blank");
+    }
+  </script>
+</html>
