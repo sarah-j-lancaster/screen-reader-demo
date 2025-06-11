@@ -2,89 +2,117 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Div Everything Demo</title>
+    <title>Screen Readers and Divs</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="nav">
       <div class="nav-item">Home</div>
-      <div class="nav-item">About</div>
-      <div class="nav-item">Contact</div>
+      <div class="nav-item">Accessibility</div>
+      <div class="nav-item">Resources</div>
     </div>
+
     <div class="hero">
-      <div class="hero-title">Welcome to the Div Only Site</div>
-      <div class="hero-text">This entire layout uses only div elements.</div>
-      <div class="hero-button" onclick="alertBox()">Learn More</div>
+      <div class="image-container">
+        <img src="./img.png" class="image" />
+      </div>
     </div>
+
     <div class="content">
       <div class="section">
-        <div class="heading sub-heading-2">Sub Heading</div>
+        <div class="heading sub-heading-2">What Are Screen Readers?</div>
         <div class="section-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          rhoncus facilisis magna et lacinia. Aliquam id luctus dolor, et
-          aliquet diam. Sed consectetur, ipsum vel mattis sodales, nisi arcu
-          euismod mauris, et dictum risus orci a diam. Quisque orci libero,
-          fringilla a mattis vitae, euismod eget arcu.
+          Screen readers are software applications that enable visually impaired
+          users to read the text displayed on a computer screen with a speech
+          synthesizer or braille display. They interpret the content and
+          structure of web pages to provide accessible navigation.
         </div>
-      </div>
-      <div class="section">
-        <div class="heading sub-heading-3">Sub Heading for section</div>
-        <div class="section-title">Another Section</div>
-        <div class="section-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          rhoncus facilisis magna et lacinia. Aliquam id luctus dolor, et
-          aliquet diam. Sed consectetur, ipsum vel mattis sodales, nisi arcu
-          euismod mauris, et dictum risus orci a diam. Quisque orci libero,
-          fringilla a mattis vitae, euismod eget arcu.
-        </div>
-      </div>
-      <div class="section">
-        <div class="section-title">Div Links</div>
-        <div class="div-link" onclick="openSearch()">Link One</div>
-        <div class="div-link" onclick="openSearch()">Link Two</div>
       </div>
 
       <div class="section">
-        <div class="heading sub-heading-2">Sub Heading for Table</div>
-        <div class="div-table">
-          <div class="div-row">
-            <div class="div-cell div-row1-cell">Heading Row Cell 1</div>
-            <div class="div-cell div-row1-cell">Heading Row Cell 2</div>
-            <div class="div-cell div-row1-cell">Heading Row Cell 3</div>
+        <div class="heading sub-heading-3">Why Semantic HTML Matters</div>
+        <div class="section-title">Divs vs. Real Elements</div>
+        <div class="section-text">
+          Using only &lt;div&gt; tags makes it harder for screen readers to
+          understand your site’s structure. Semantic tags like &lt;nav&gt;,
+          &lt;header&gt;, &lt;section&gt;, &lt;a&gt; and &lt;footer&gt; provide meaning,
+          which helps assistive technologies guide users more effectively.
+        </div>
+        <div class="section-button" onclick="alertBox()">Learn More</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Useful Links</div>
+        <div class="div-link" onclick="openSearch()">Introduction to ARIA</div>
+        <div class="div-link" onclick="openSearch()">
+          How Screen Readers Work
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="heading sub-heading-2">Popular Screen Readers</div>
+        <div class="table">
+          <div class="row">
+            <div class="cell cell-title">Screen Reader</div>
+            <div class="cell cell-title">Platform</div>
+            <div class="cell cell-title">Free/Paid</div>
           </div>
-          <div class="div-row">
-            <div class="div-cell">Row 2 Cell 1</div>
-            <div class="div-cell">Row 2 Cell 2</div>
-            <div class="div-cell">Row 2 Cell 3</div>
+          <div class="row">
+            <div class="cell">JAWS</div>
+            <div class="cell">Windows</div>
+            <div class="cell">Paid</div>
           </div>
-          <div class="div-row">
-            <div class="div-cell">Row 2 Cell 1</div>
-            <div class="div-cell">Row 2 Cell 2</div>
-            <div class="div-cell">Row 2 Cell 3</div>
+          <div class="row">
+            <div class="cell">NVDA</div>
+            <div class="cell">Windows</div>
+            <div class="cell">Free</div>
+          </div>
+          <div class="row">
+            <div class="cell">VoiceOver</div>
+            <div class="cell">macOS/iOS</div>
+            <div class="cell">Free</div>
           </div>
         </div>
       </div>
       <div class="section">
-        <div class="heading sub-heading-2">Sub Heading</div>
+        <div class="section-title">Quick Quiz</div>
         <div class="section-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          rhoncus facilisis magna et lacinia. Aliquam id luctus dolor, et
-          aliquet diam. Sed consectetur, ipsum vel mattis sodales, nisi arcu
-          euismod mauris, et dictum risus orci a diam. Quisque orci libero,
-          fringilla a mattis vitae, euismod eget arcu.
+          Which of the following is a free screen reader?
+        </div>
+        <div class="answer-box">
+          <div class="button" onclick="checkAnswer(this)">JAWS</div>
+          <div class="button" onclick="checkAnswer(this)">NVDA</div>
+          <div class="button" onclick="checkAnswer(this)">SuperReader</div>
+     
+    </div>
+      <div class="section">
+        <div class="heading sub-heading-2">Tips for Accessibility</div>
+        <div class="section-text">
+          Use semantic HTML whenever possible. Always provide alt text for
+          images, ensure proper heading hierarchy, and test your website with at
+          least one screen reader to ensure compatibility.
         </div>
       </div>
     </div>
+
     <div class="footer">
-      <div class="footer-item">© 2024 Div Demo</div>
+      <div class="footer-item">© 2025 Screen Reader Info</div>
     </div>
   </body>
+
   <script>
     function alertBox() {
-      alert("Learning more");
+      alert("Learning more about screen readers!");
     }
     function openSearch() {
-      window.open("https://www.google.com", "_blank");
+      window.open("https://www.google.com/search?q=screen+readers", "_blank");
+    }
+    function checkAnswer(el) {
+      if (el.textContent === "NVDA") {
+        alert("Correct! NVDA is a free screen reader.");
+      } else {
+        alert("Not quite. Try again!");
+      }
     }
   </script>
 </html>
