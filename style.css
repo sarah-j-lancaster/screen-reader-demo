@@ -4,6 +4,45 @@ body {
   padding: 0;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+button:focus-visible {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-to-content-link {
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+  }
+
+  .skip-to-content-link {
+    background: #263752;
+    color: #fff;
+    height: 30px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+  }
+  
+  .skip-to-content-link:focus {
+    transform: translateY(0%);
+  }
+
 .nav {
   display: flex;
   background-color: #263752;
@@ -13,12 +52,13 @@ body {
   padding: 15px 20px;
   color: white;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-item:hover {
   background-color: #cde2ea;
   color: #263752;
-
+  text-decoration: underline;
 }
 
 .hero {
@@ -27,16 +67,16 @@ body {
 }
 
 .image {
-    width: 100%;
-    margin: 2em auto;
-    text-align: center;
+  width: 100%;
+  margin: 2em auto;
+  text-align: center;
 }
 
 .image-container {
-    max-width: 500px;
-    margin: auto;
-    height: auto;
-    border-radius: 12px; 
+  max-width: 500px;
+  margin: auto;
+  height: auto;
+  border-radius: 12px;
 }
 
 .hero-title {
@@ -49,6 +89,7 @@ body {
 }
 
 .section-button {
+  all: unset;
   display: inline-block;
   padding: 10px 20px;
   background-color: #263752;
@@ -56,6 +97,11 @@ body {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 20px;
+}
+
+.section-links {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-button:hover {
@@ -133,9 +179,11 @@ body {
   display: flex;
   gap: 100px;
   padding: 20px;
+  list-style: none;
 }
 
 .button {
+  all: unset;
   display: inline-block;
   padding: 10px 20px;
   background-color: #263752;
